@@ -4,16 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        string gameLoop = ("continue");
 
         Random randomGenerator = new Random();
         int number = randomGenerator.Next(1,100);
 
-        while (gameLoop == "continue")
+        int numberGuess = -1;
+
+        while (numberGuess != number)
         {
             Console.WriteLine("What is your guess? ");
-            string guess = Console.ReadLine();
-            int numberGuess = int.Parse(guess);
+            numberGuess = int.Parse(Console.ReadLine());
 
             if (numberGuess > number)
             {
@@ -27,9 +27,8 @@ class Program
 
             else
             {
-                gameLoop = "stop";
+                Console.WriteLine("Correct! You win the game.");
             }
         }
-        Console.WriteLine("Correct! You win the game.");
     }
 }
