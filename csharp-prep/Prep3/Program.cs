@@ -7,7 +7,7 @@ class Program
         string gameLoop = ("continue");
 
         Random randomGenerator = new Random();
-        int number = randomGenerator.Next(1,11);
+        int number = randomGenerator.Next(1,100);
 
         while (gameLoop == "continue")
         {
