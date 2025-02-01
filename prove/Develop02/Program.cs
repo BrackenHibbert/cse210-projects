@@ -8,6 +8,15 @@ using System.Net.WebSockets;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 
+
+// For this program I had to teach and reteach myself a lot. I learned a lot more about the word "static" andI also spent a lot of time 
+// figuring out why my main program was not reading some of my methods from my other classes, that took a long time to figure out. 
+// I used AI a lot to  teach me principles of C# That I as struggling with and I feel like I learned more from this assignment than 
+// all of what I learned in the past 3 weeks. I still don't know if I could do it all by myseld without being able to ask questions, 
+// but I do feel like a learned a lot. A few extra things I learned about was the override, saving to a txt file, random in C#, datetime,
+// and a few other things I hadn't learned yet. I don't know if that counts for exceeding core requirements, but the time I spent on the project says yes. 
+
+
 namespace Develop02
 {
     public class Program
