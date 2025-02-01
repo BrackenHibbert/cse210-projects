@@ -15,4 +15,5 @@ public class Entry
         Console.WriteLine($"{_entryDateTime} {_prompt}");
         Console.WriteLine($"{_entryText}");
     }
+    
 }
