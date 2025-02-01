@@ -9,11 +9,10 @@ public class Entry
 
     public string _entryText;
 
-    // behavior
-    public void Display()
+    // behaviord
+    public override string ToString()
     {
-        Console.WriteLine($"{_entryDateTime} {_prompt}");
-        Console.WriteLine($"{_entryText}");
+        return ($"{_entryDateTime}: {_prompt} -- {_entryText}");
     }
-    
+
 }

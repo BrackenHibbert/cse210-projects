@@ -1,20 +1,23 @@
 using System.Reflection.Metadata.Ecma335;
 using Develop02;
 
-public static class SaveLoadManager
+namespace Develop02
 {
-    public static void SaveJournal(List<string> journal, string filepath)
+    public static class SaveLoadManager
     {
-        File.WriteAllLines(filepath, journal);
-        Console.WriteLine("Journal saved");
-    }
+        public static void SaveJournal(List<string> journal, string filepath)
+        {
+            File.WriteAllLines(filepath, journal);
+            Console.WriteLine("Journal saved");
+        }
 
-    public static List<string> LoadJournal(string filepath)
-    {
-        List<string> journal = new List<string>(File.ReadAllLines(filepath));
-        Console.WriteLine("Journal Loaded");
+        public static List<string> LoadJournal(string filepath)
+        {
+            List<string> journal = new List<string>(File.ReadAllLines(filepath));
+            Console.WriteLine("Journal Loaded");
 
-        return journal;
+            return journal;
+        }
+        
     }
-    
 }
