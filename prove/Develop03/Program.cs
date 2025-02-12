@@ -31,7 +31,7 @@ class Program
         {
             Console.Clear();
             Console.WriteLine(_reference);
-            List<Word> _newList = replace.ReplaceRandomWord();
+            List<Word> _newList = replace.ReplaceRandomWord();  //Error based on reference file line 11.
             Console.WriteLine(_newList);
 
             Console.ReadLine();
