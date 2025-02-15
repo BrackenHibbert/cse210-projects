@@ -10,10 +10,8 @@ class Program
         Reference reference = new Reference();
         string _reference = reference.GetReference();
 
-        Replace replace = new Replace();
+        Scripture scripture = new Scripture();
 
-        Scripture processed = new Scripture();
-        List<Word> wordlist = processed.GetWords();
 
     // Introduction
         Console.WriteLine("Welcome to the Scripture memorizing program. Press Enter to begin the program and move to the next step, type 'quit' to end the program.");
@@ -21,27 +19,21 @@ class Program
 
         Console.Clear();
         Console.WriteLine(_reference);
-        foreach (Word word in wordlist)
-        {
-            Console.Write(word.GetText() + " ");
-        }
+        scripture.DisplaySentence();
+
+        Replace replace = new Replace(scripture);
+        replace.Reset();
 
     // Loop for Scripture
-        while (choice != "quit")
+        while (choice != "quit" && replace.CanReplace())
         {
             Console.Clear();
             Console.WriteLine(_reference);
-            List<Word> _newList = replace.ReplaceRandomWord();  //Error based on reference file line 11.
-            Console.WriteLine(_newList);
+            List<Word> _newList = replace.ReplaceRandomWord();  
+            scripture.SetScripture(_newList);
+            scripture.DisplaySentence();
 
-            Console.ReadLine();
-
-        }
-
-
-        foreach (Word word in wordlist)
-        {
-            Console.Write(word.GetText() + " ");
+            choice = Console.ReadLine();
         }
 
     }

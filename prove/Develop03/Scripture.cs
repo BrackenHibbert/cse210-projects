@@ -33,4 +33,13 @@ public class Scripture
         }
     }
 
+    public void DisplaySentence()
+    {
+        foreach (Word word in _words)
+        {
+            Console.Write (word.GetText() + " ");
+        }
+        Console.WriteLine();
+    }
+
 }
