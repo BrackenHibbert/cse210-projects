@@ -1,5 +1,9 @@
 using System;
 
+// To exceed requirements I made a unique spinner and I focused on getting rid of all and any 
+// repetitiveness in code through using methods in the parent class. I also worked a lot with
+// DateTime to figure out how to set timers for the different activities.
+
 class Program
 {
     static void Main(string[] args)
