@@ -1,55 +1,30 @@
-public class Goal
+public abstract class Goal
 {
-    // Attributes
-    protected string _goal;
+    // Encapsulated fields with public properties
+    protected string _name;
     protected string _description;
-    protected int _points;
-    protected bool _status;
-    private int _totalScore;
-    private List<Goal> _goalList;
-    protected string _fullGoal;
+    public int _points;
+    protected bool _isComplete;
 
-    // Initializors
-public Goal()
-{
-    Console.WriteLine("What is your goal? ");
-    _goal = Console.ReadLine();
-    Console.WriteLine();
+    public string Name { get => _name; }
+    public string Description { get => _description; }
+    public int Points { get => _points; }
+    public bool IsComplete { get => _isComplete; }
 
-    Console.WriteLine("Give a brief description of your goal: ");
-    _description = Console.ReadLine();
-    Console.WriteLine();
-
-    Console.WriteLine("How many points is it worth? ");
-    _points = int.Parse(Console.ReadLine());
-    Console.WriteLine();
-
-    _status = false;
-    _totalScore = 0;
-    _goalList = new();
-    _fullGoal = AssembleGoal();
-}
-
-
-    // Methods
-public string AssembleGoal()
-{
-    string status;
-    if (_status)
+    public Goal(string name, string description, int points)
     {
-        status = "[X]";
-    }
-    else
-    {
-        status = "[ ]";
+        _name = name;
+        _description = description;
+        _points = points;
+        _isComplete = false;
     }
 
-    return ($"{status} - {_goal} - {_description} - {_points}");
-}
+    // Abstract methods for polymorphism
+    public abstract void RecordEvent();
+    public abstract string GetProgress();
 
-public void RecordEvent()
-{
-
-}
-
+    public override string ToString()
+    {
+        return $"{(IsComplete ? "[X]" : "[ ]")} {Name} - {Description} - {Points} points";
+    }
 }
