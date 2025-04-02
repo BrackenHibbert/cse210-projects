@@ -1,18 +1,44 @@
 public abstract class AdvancedMath
 {
     // Attributes
-    protected float _variable1;
-    protected float _variable2;
+    private double _variablea;
+    private double _variableb;
+    private double _variablec;
 
-    // Initializors
-    public AdvancedMath()
+    public void SetVarA(double variable)
     {
-        Console.WriteLine("Enter the first variable: ");
-        _variable1 = float.Parse(Console.ReadLine());
-        Console.WriteLine("Enter your second variable: ");
-        _variable2 = float.Parse(Console.ReadLine());
+        _variablea = variable;
     }
 
-    // Methods
+    public void SetVarB(double variable)
+    {
+        _variableb = variable;
+    }
+
+    public void SetVarC(double variable)
+    {
+        _variablec = variable;
+    }
+
+
+
+    
+
+    public double GetVarA()
+    {
+        return _variablea;
+    }
+
+    public double GetVarB()
+    {
+        return _variableb;
+    }
+
+    public double GetVarC()
+    {
+        return _variablec;
+    }
+
+
     
 }

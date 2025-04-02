@@ -99,7 +99,7 @@ public class Volume : Geometry
         Console.WriteLine();
         Console.Write("Enter the Height: ");
         double height = double.Parse(Console.ReadLine());
-        return 1 / 3 * tbase * height;
+        return 1.0 / 3 * tbase * height;
     }
 
     public override double Sphere()

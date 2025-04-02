@@ -25,7 +25,7 @@ class Program
                     SelectGeo();
                     break;
                 case "3":
-                    // DisplayGoals();
+                    SelectFunc();
                     break;
                 case "4":
                     running = false;
@@ -43,8 +43,10 @@ class Program
         Console.WriteLine("2. Subtraction");
         Console.WriteLine("3. Multiplication");
         Console.WriteLine("4. Division");
+        Console.WriteLine();
         Console.Write("Select Math Type: ");
         string type = Console.ReadLine();
+        Console.WriteLine();
 
 
         if (type == "1")
@@ -76,6 +78,7 @@ class Program
         Console.WriteLine();
         Console.Write("Select Math Type: ");
         string type = Console.ReadLine();
+        Console.WriteLine();
 
 
         if (type == "1")
@@ -87,6 +90,28 @@ class Program
         {
             Volume volume = new Volume();
             volume.SelectVolume();
+        }
+    }
+
+    static void SelectFunc()
+    {
+        Console.WriteLine("1. Basic Functions");
+        Console.WriteLine("2. Statistics");
+        Console.WriteLine();
+        Console.Write("Select Math Type: ");
+        string type = Console.ReadLine();
+        Console.WriteLine();
+
+
+        if (type == "1")
+        {
+            Functions functions = new Functions();
+            functions.SelectForm();
+        }
+        else if (type == "2")
+        {
+            Statistics stat = new Statistics();
+            stat.SelectStat();
         }
     }
 }
