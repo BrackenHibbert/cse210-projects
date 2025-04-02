@@ -7,17 +7,22 @@ public class AddSub : SimpleMath
 
 
     // Methods
-    public override float Math1()
+    public override void Math1()
     {
+        Console.Clear();
         //ADDITION
         float sum = _variable1 + _variable2;
-        return sum;
+        Console.WriteLine(sum);
+        Console.ReadLine();
+        
     }
 
-    public override float Math2()
+    public override void Math2()
     {
+        Console.Clear();
         // Subtraction
         float answer = _variable1 - _variable2;
-        return answer;
+        Console.WriteLine(answer);
+        Console.ReadLine();
     }
 }

@@ -8,13 +8,15 @@ class Program
 
         while (running)
         {
+            Console.Clear();
             Console.WriteLine("1. Simple Calculator");
             Console.WriteLine("2. Geometry");
             Console.WriteLine("3. Other Functions");
             Console.WriteLine("4. Quit");
-
+            Console.WriteLine();
             Console.Write("Choose an option: ");
             string choice = Console.ReadLine();
+
 
             switch (choice)
             {
@@ -39,6 +41,7 @@ class Program
 
     static void SimpleCalculator()
     {
+        Console.Clear();
         Console.WriteLine("1. Addition");
         Console.WriteLine("2. Subtraction");
         Console.WriteLine("3. Multiplication");
@@ -52,33 +55,34 @@ class Program
         if (type == "1")
         {
             AddSub addsub = new AddSub();
-            Console.WriteLine(addsub.Math1());
+            addsub.Math1();
         }
         else if (type == "2")
         {
             AddSub addsub = new AddSub();
-            Console.WriteLine(addsub.Math2());
+            addsub.Math2();
         }
         else if (type == "3")
         {
             MultDiv multdiv = new MultDiv();
-            Console.WriteLine(multdiv.Math1());
+            multdiv.Math1();
         }
         else if (type == "4")
         {
             MultDiv multdiv = new MultDiv();
-            Console.WriteLine(multdiv.Math2());
+            multdiv.Math2();
         }
     }
 
     static void SelectGeo()
     {
+        Console.Clear();
         Console.WriteLine("1. Area");
         Console.WriteLine("2. Volume");
         Console.WriteLine();
         Console.Write("Select Math Type: ");
         string type = Console.ReadLine();
-        Console.WriteLine();
+        Console.Clear();
 
 
         if (type == "1")
@@ -95,6 +99,7 @@ class Program
 
     static void SelectFunc()
     {
+        Console.Clear();
         Console.WriteLine("1. Basic Functions");
         Console.WriteLine("2. Statistics");
         Console.WriteLine();

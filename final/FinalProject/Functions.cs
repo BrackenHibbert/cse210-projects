@@ -9,6 +9,7 @@ public class Functions : AdvancedMath
     // Methods
     public void SelectForm()
     {
+        Console.Clear();
         Console.WriteLine("1. Quadratic Formula");
         Console.WriteLine("2. Square Difference");
         Console.WriteLine("3. Square Trinomial");
@@ -34,6 +35,7 @@ public class Functions : AdvancedMath
 
     public void QuadraticForm()
     {
+        Console.Clear();
         Console.Write("Enter coefficient a: ");
         SetVarA(double.Parse(Console.ReadLine()));
 
@@ -47,6 +49,7 @@ public class Functions : AdvancedMath
         if (GetVarA() == 0)
         {
             Console.WriteLine("Invalid input. 'a' must not be zero.");
+            Console.ReadLine();
             return;
         }
 
@@ -57,20 +60,24 @@ public class Functions : AdvancedMath
             double root1 = (-GetVarB() + Math.Sqrt(discriminant)) / (2 * GetVarA());
             double root2 = (-GetVarB() - Math.Sqrt(discriminant)) / (2 * GetVarA());
             Console.WriteLine($"The roots are real and different:\nRoot 1: {root1}\nRoot 2: {root2}");
+            Console.ReadLine();
         }
         else if (discriminant == 0)
         {
             double root = -GetVarB() / (2 * GetVarA());
             Console.WriteLine($"The roots are real and identical:\nRoot: {root}");
+            Console.ReadLine();
         }
         else
         {
             Console.WriteLine("The equation has no real roots.");
+            Console.ReadLine();
         }
     }
 
     public void SquareDiff()
     {
+        Console.Clear();
         Console.Write("Enter coefficient a: ");
         SetVarA(double.Parse(Console.ReadLine()));
 
@@ -83,11 +90,12 @@ public class Functions : AdvancedMath
         string formula = $"({GetVarA()} - {GetVarB()}) * ({GetVarA()} + {GetVarB()})";
 
         Console.WriteLine($"Factored Form: {formula}, Difference: {difference}");
-        Console.WriteLine();
+        Console.ReadLine();
     }
     
     public void SquareTri()
     {
+        Console.Clear();
         Console.Write("Enter coefficient a: ");
         SetVarA(double.Parse(Console.ReadLine()));
 
@@ -108,5 +116,6 @@ public class Functions : AdvancedMath
         double factoredAns = Math.Pow((GetVarA()) + (GetVarB()), 2) ;
 
         Console.WriteLine($"Square Trinomial: {trinomial} = {triAns}, Factored Form: {factoredForm} = {factoredAns}");
+        Console.ReadLine();
     }
 }

@@ -10,6 +10,7 @@ public class Volume : Geometry
 
     public void SelectVolume()
     {
+        Console.Clear();
         Console.WriteLine("1. Cube");
         Console.WriteLine("2. Parallelpiped");
         Console.WriteLine("3. Prism");
@@ -54,6 +55,7 @@ public class Volume : Geometry
 
     public double Cube()
     {
+        Console.Clear();
         Console.Write("Enter the Length of a Side: ");
         double length = double.Parse(Console.ReadLine());
         return length * length * length;
@@ -61,6 +63,7 @@ public class Volume : Geometry
 
     public double Parallelepiped()
     {
+        Console.Clear();
         Console.Write("Enter the Length:");
         double length = double.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -74,6 +77,7 @@ public class Volume : Geometry
 
     public double Prism()
     {
+        Console.Clear();
         Console.Write("Enter the Base: ");
         double tbase = double.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -84,6 +88,7 @@ public class Volume : Geometry
 
     public double Cylinder()
     {
+        Console.Clear();
         Console.Write("Enter the radius: ");
         double radius = double.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -94,6 +99,7 @@ public class Volume : Geometry
 
     public override double Cone()
     {
+        Console.Clear();
         Console.Write("Enter the Base: ");
         double tbase = double.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -104,6 +110,7 @@ public class Volume : Geometry
 
     public override double Sphere()
     {
+        Console.Clear();
         Console.Write("Enter the Radius: ");
         double radius = double.Parse(Console.ReadLine());
         return 4 / 3 * Math.PI * radius * radius * radius;

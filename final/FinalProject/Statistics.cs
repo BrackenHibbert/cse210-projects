@@ -10,6 +10,7 @@ public class Statistics : AdvancedMath
 
     public void SelectStat()
     {
+        Console.Clear();
         Console.WriteLine("1. Median");
         Console.WriteLine("2. Mean");
         Console.WriteLine("3. Standard Deviation");

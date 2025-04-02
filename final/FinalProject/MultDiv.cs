@@ -7,17 +7,21 @@ public class MultDiv : SimpleMath
 
 
     // Methods
-    public override float Math1()
+    public override void Math1()
     {
+        Console.Clear();
         // MULTIPLICATION
         float answer = _variable1 * _variable2;
-        return answer;
+        Console.WriteLine(answer);
+        Console.ReadLine();
     }
 
-    public override float Math2()
+    public override void Math2()
     {
+        Console.Clear();
         // DIVISION
         float answer = _variable1 / _variable2;
-        return answer;
+        Console.WriteLine(answer);
+        Console.ReadLine();
     }
 }

@@ -9,6 +9,7 @@ public class Area : Geometry
     // Methods
     public void SelectArea()
     {
+        Console.Clear();
         Console.WriteLine("1. Square");
         Console.WriteLine("2. Rectangle");
         Console.WriteLine("3. Triangle");
@@ -25,19 +26,19 @@ public class Area : Geometry
 
         if (type == "1")
         {
-            Console.WriteLine(Square());
+            Square();
         }
         else if (type == "2")
         {
-            Console.WriteLine(Rectangle());
+            Rectangle();
         }
         else if (type == "3")
         {
-            Console.WriteLine(Triangle());
+            Triangle();
         }
         else if (type == "4")
         {
-            Console.WriteLine(Rhombus());
+            Rhombus();
         }
         else if (type == "5")
         {
@@ -61,45 +62,54 @@ public class Area : Geometry
         }
     }
 
-    public double Square()
+    public void Square()
     {
+        Console.Clear();
         Console.Write("Enter the Length: ");
         double length = double.Parse(Console.ReadLine());
-        return length * length;
+        Console.WriteLine(length * length);
+        Console.ReadLine();
     }
 
-    public double Rectangle()
+    public void Rectangle()
     {
+        Console.Clear();
         Console.Write("Enter the Width: ");
         double width = double.Parse(Console.ReadLine());
         Console.WriteLine();
         Console.Write("Enter the Height: ");
         double height = double.Parse(Console.ReadLine());
-        return width * height;
+        Console.WriteLine(width * height);
+        Console.ReadLine();
     }
 
-    public double Triangle()
+    public void Triangle()
     {
+        Console.Clear();
         Console.Write("Enter the Base: ");
         double tbase = double.Parse(Console.ReadLine());
         Console.WriteLine();
         Console.Write("Enter the Height: ");
         double height = double.Parse(Console.ReadLine());
-        return height * tbase / 2;
+        Console.WriteLine(height * tbase / 2);
+        Console.ReadLine();
     }
 
-    public double Rhombus()
+    public void Rhombus()
     {
+        Console.Clear();
         Console.Write("Enter the Large Diagonal: ");
         double ldiag = double.Parse(Console.ReadLine());
         Console.WriteLine();
         Console.Write("Enter the Small Diagonal: ");
         double sdiag = double.Parse(Console.ReadLine());
-        return ldiag * sdiag / 2;
+        Console.WriteLine(ldiag * sdiag / 2);
+        Console.ReadLine();
     }
 
     public double Trapezoid()
     {
+        Console.Clear();
         Console.Write("Enter the Large Side: ");
         double large = double.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -113,6 +123,7 @@ public class Area : Geometry
 
     public double Polygon()
     {
+        Console.Clear();
         Console.Write("Enter the Perimeter: ");
         double perimeter = double.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -123,6 +134,7 @@ public class Area : Geometry
 
     public double Circle()
     {
+        Console.Clear();
         Console.Write("Enter the Radius: ");
         double radius = double.Parse(Console.ReadLine());
         return Math.PI * radius * radius;
@@ -130,6 +142,7 @@ public class Area : Geometry
 
     public override double Cone()
     {
+        Console.Clear();
         Console.Write("Enter the radius: ");
         double radius = double.Parse(Console.ReadLine());
         Console.WriteLine();
@@ -140,6 +153,7 @@ public class Area : Geometry
 
     public override double Sphere()
     {
+        Console.Clear();
         Console.Write("Enter the Radius: ");
         double radius = double.Parse(Console.ReadLine());
         return 4 * Math.PI * radius * radius;

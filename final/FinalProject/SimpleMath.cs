@@ -7,6 +7,7 @@ public abstract class SimpleMath
     // Initializors
     public SimpleMath()
     {
+        Console.Clear();
         Console.WriteLine("Enter the first variable: ");
         _variable1 = float.Parse(Console.ReadLine());
         Console.WriteLine("Enter your second variable: ");
@@ -14,6 +15,6 @@ public abstract class SimpleMath
     }
     
     // Methods
-    public abstract float Math1();
-    public abstract float Math2();
+    public abstract void Math1();
+    public abstract void Math2();
 }
