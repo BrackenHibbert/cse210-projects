@@ -42,23 +42,23 @@ public class Area : Geometry
         }
         else if (type == "5")
         {
-            Console.WriteLine(Trapezoid());
+            Trapezoid();
         }
         else if (type == "6")
         {
-            Console.WriteLine(Polygon());
+            Polygon();
         }
         else if (type == "7")
         {
-            Console.WriteLine(Circle());
+            Circle();
         }
         else if (type == "8")
         {
-            Console.WriteLine(Cone());
+            Cone();
         }
         else if (type == "9")
         {
-            Console.WriteLine(Sphere());
+            Sphere();
         }
     }
 
@@ -66,8 +66,8 @@ public class Area : Geometry
     {
         Console.Clear();
         Console.Write("Enter the Length: ");
-        double length = double.Parse(Console.ReadLine());
-        Console.WriteLine(length * length);
+        SetVarA(double.Parse(Console.ReadLine()));
+        Console.WriteLine(GetVarA() * GetVarA());
         Console.ReadLine();
     }
 
@@ -75,11 +75,11 @@ public class Area : Geometry
     {
         Console.Clear();
         Console.Write("Enter the Width: ");
-        double width = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Height: ");
-        double height = double.Parse(Console.ReadLine());
-        Console.WriteLine(width * height);
+        SetVarB(double.Parse(Console.ReadLine()));
+        Console.WriteLine(GetVarA() * GetVarB());
         Console.ReadLine();
     }
 
@@ -87,11 +87,11 @@ public class Area : Geometry
     {
         Console.Clear();
         Console.Write("Enter the Base: ");
-        double tbase = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Height: ");
-        double height = double.Parse(Console.ReadLine());
-        Console.WriteLine(height * tbase / 2);
+        SetVarB(double.Parse(Console.ReadLine()));
+        Console.WriteLine(GetVarB() * GetVarA() / 2);
         Console.ReadLine();
     }
 
@@ -99,64 +99,69 @@ public class Area : Geometry
     {
         Console.Clear();
         Console.Write("Enter the Large Diagonal: ");
-        double ldiag = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Small Diagonal: ");
-        double sdiag = double.Parse(Console.ReadLine());
-        Console.WriteLine(ldiag * sdiag / 2);
+        SetVarB(double.Parse(Console.ReadLine()));
+        Console.WriteLine(GetVarA() * GetVarB() / 2);
         Console.ReadLine();
     }
 
-    public double Trapezoid()
+    public void Trapezoid()
     {
         Console.Clear();
         Console.Write("Enter the Large Side: ");
-        double large = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Small Side: ");
-        double small = double.Parse(Console.ReadLine());
+        SetVarB(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Height: ");
-        double height = double.Parse(Console.ReadLine());
-        return (large + small) / 2 * height;
+        SetVarC(double.Parse(Console.ReadLine()));
+        Console.WriteLine((GetVarA() + GetVarB()) / 2 * GetVarC());
+        Console.ReadLine();
     }
 
-    public double Polygon()
+    public void Polygon()
     {
         Console.Clear();
         Console.Write("Enter the Perimeter: ");
-        double perimeter = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Apothem: ");
-        double apothem = double.Parse(Console.ReadLine());
-        return perimeter / 2 * apothem;
+        SetVarB(double.Parse(Console.ReadLine()));
+        Console.WriteLine(GetVarA() / 2 * GetVarB());
+        Console.ReadLine();
     }
 
-    public double Circle()
+    public void Circle()
     {
         Console.Clear();
         Console.Write("Enter the Radius: ");
-        double radius = double.Parse(Console.ReadLine());
-        return Math.PI * radius * radius;
+        SetVarA(double.Parse(Console.ReadLine()));
+        Console.WriteLine(Math.PI * GetVarA() * GetVarA());
+        Console.ReadLine();
     }
 
-    public override double Cone()
+    public override void Cone()
     {
         Console.Clear();
         Console.Write("Enter the radius: ");
-        double radius = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Slant Height: ");
-        double slant = double.Parse(Console.ReadLine());
-        return Math.PI * radius * slant;
+        SetVarB(double.Parse(Console.ReadLine()));
+        Console.WriteLine(Math.PI * GetVarA() * GetVarB());
+        Console.ReadLine();
     }
 
-    public override double Sphere()
+    public override void Sphere()
     {
         Console.Clear();
         Console.Write("Enter the Radius: ");
-        double radius = double.Parse(Console.ReadLine());
-        return 4 * Math.PI * radius * radius;
+        SetVarA(double.Parse(Console.ReadLine()));
+        Console.WriteLine(4 * Math.PI * GetVarA() * GetVarA());
+        Console.ReadLine();
     }
     
 }

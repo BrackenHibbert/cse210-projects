@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
+        Console.WriteLine("Welcome to the calculator program for many of your basic math needs. Press Enter to continue and then select your desired option.");
+        Console.ReadLine();
+
         bool running = true;
 
         while (running)

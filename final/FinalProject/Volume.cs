@@ -25,94 +25,100 @@ public class Volume : Geometry
 
         if (type == "1")
         {
-            Console.WriteLine(Cube());
+            Cube();
         }
         else if (type == "2")
         {
-            Console.WriteLine(Parallelepiped());
+            Parallelepiped();
         }
         else if (type == "3")
         {
-            Console.WriteLine(Prism());
+            Prism();
         }
         else if (type == "4")
         {
-            Console.WriteLine(Cylinder());
+            Cylinder();
         }
         else if (type == "5")
         {
-            Console.WriteLine(Cone());
+            Cone();
         }
         else if (type == "6")
         {
-            Console.WriteLine(Cone());
+            Cone();
         }
         else if (type == "7")
         {
-            Console.WriteLine(Sphere());
+            Sphere();
         }
     }
 
-    public double Cube()
+    public void Cube()
     {
         Console.Clear();
         Console.Write("Enter the Length of a Side: ");
-        double length = double.Parse(Console.ReadLine());
-        return length * length * length;
+        SetVarA(double.Parse(Console.ReadLine()));
+        Console.WriteLine(GetVarA() * GetVarA() * GetVarA());
+        Console.ReadLine();
     }
 
-    public double Parallelepiped()
+    public void Parallelepiped()
     {
         Console.Clear();
         Console.Write("Enter the Length:");
-        double length = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Width: ");
-        double width = double.Parse(Console.ReadLine());
+        SetVarB(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Height: ");
-        double height = double.Parse(Console.ReadLine());
-        return length * width * height;
+        SetVarC(double.Parse(Console.ReadLine()));
+        Console.WriteLine(GetVarA() * GetVarB() * GetVarC());
+        Console.ReadLine();
     }
 
-    public double Prism()
+    public void Prism()
     {
         Console.Clear();
         Console.Write("Enter the Base: ");
-        double tbase = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Height: ");
-        double height = double.Parse(Console.ReadLine());
-        return height * tbase / 2;
+        SetVarB(double.Parse(Console.ReadLine()));
+        Console.WriteLine(GetVarB() * GetVarA() / 2);
+        Console.ReadLine();
     }
 
-    public double Cylinder()
+    public void Cylinder()
     {
         Console.Clear();
         Console.Write("Enter the radius: ");
-        double radius = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Height: ");
-        double height = double.Parse(Console.ReadLine());
-        return Math.PI * radius * radius * height;
+        SetVarB(double.Parse(Console.ReadLine()));
+        Console.WriteLine(Math.PI * GetVarA() * GetVarA() * GetVarB());
+        Console.ReadLine();
     }
 
-    public override double Cone()
+    public override void Cone()
     {
         Console.Clear();
         Console.Write("Enter the Base: ");
-        double tbase = double.Parse(Console.ReadLine());
+        SetVarA(double.Parse(Console.ReadLine()));
         Console.WriteLine();
         Console.Write("Enter the Height: ");
-        double height = double.Parse(Console.ReadLine());
-        return 1.0 / 3 * tbase * height;
+        SetVarB(double.Parse(Console.ReadLine()));
+        Console.WriteLine(1.0 / 3 * GetVarA() * GetVarB());
+        Console.ReadLine();
     }
 
-    public override double Sphere()
+    public override void Sphere()
     {
         Console.Clear();
         Console.Write("Enter the Radius: ");
-        double radius = double.Parse(Console.ReadLine());
-        return 4 / 3 * Math.PI * radius * radius * radius;
+        SetVarA(double.Parse(Console.ReadLine()));
+        Console.WriteLine(4 / 3 * Math.PI * GetVarA() * GetVarA() * GetVarA());
+        Console.ReadLine();
     }
 }
